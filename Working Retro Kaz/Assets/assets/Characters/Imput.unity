@@ -250,11 +250,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 150980876992828586, guid: 4c787399054d6854088ab5a349ff86ff, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.030088
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150980876992828586, guid: 4c787399054d6854088ab5a349ff86ff, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9788346
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 150980876992828586, guid: 4c787399054d6854088ab5a349ff86ff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -298,6 +298,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1591040484782601784, guid: 4c787399054d6854088ab5a349ff86ff, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3542690057864719591, guid: 4c787399054d6854088ab5a349ff86ff, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 99116d6ebcf85fb4fa78e4422724d571, type: 3}
+    - target: {fileID: 3542690057864719591, guid: 4c787399054d6854088ab5a349ff86ff, type: 3}
+      propertyPath: m_DefaultActionMap
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
