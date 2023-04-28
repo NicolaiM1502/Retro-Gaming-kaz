@@ -13,14 +13,18 @@ public class PlayerController : MonoBehaviour
 
     public ContactFilter2D movementfilter;
 
+    public PlayerActions _playerActions; 
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     Animator animator;
     List<RaycastHit2D> CastCollisions = new List<RaycastHit2D>();
+    [SerializeField] private InputActionReference movement;
 
     bool canMove = true;
-
+    void Awake(){
+        _playerActions = new PlayerActions();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +34,11 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate() { 
+
+         movementInput = _playerActions.PlayerMovement.movement.ReadValue<Vector2>();
+
+
+
         if(canMove) {
 
     //movenet = not 0, try to move
@@ -101,6 +110,16 @@ private bool TryMove(Vector2 direction) {
 
     public void UnlockMovement() {
         canMove = true;
+    }
+
+    public void OnEnable(){
+        _playerActions.PlayerMovement.Enable();
+
+    }
+
+   public void Disable(){
+        _playerActions.PlayerMovement.Disable();
+
     }
 
 }
