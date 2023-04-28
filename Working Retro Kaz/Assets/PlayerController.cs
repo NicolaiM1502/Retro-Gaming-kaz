@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     List<RaycastHit2D> CastCollisions = new List<RaycastHit2D>();
 
-    bool canMove true;
+    bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
