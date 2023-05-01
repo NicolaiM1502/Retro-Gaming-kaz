@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public ContactFilter2D movementfilter;
 
+    public SwordAttack swordAttack;
+
     public PlayerActions _playerActions; 
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
@@ -43,7 +45,6 @@ public class PlayerController : MonoBehaviour
 
     //movenet = not 0, try to move
         if(movementInput != Vector2.zero) { 
-
             bool success = TryMove(movementInput);
 
             if(!success) {
@@ -103,6 +104,18 @@ private bool TryMove(Vector2 direction) {
     void OnAttack() {
         Debug.Log("Attack detected..");
         animator.SetTrigger("Attack");
+    }
+
+    public void SwordAttack() {
+        LockMovement();
+        if(spriteRenderer.flipX == true){
+            swordAttack.AttackLeft();
+            Debug.Log("SwordAttack colliderPos: " + swordAttack.transform.position );
+        }else {
+            swordAttack.AttackRight();
+            Debug.Log("SwordAttack colliderPos: " + swordAttack.transform.position );
+        }
+
     }
 
     public void LockMovement() {
