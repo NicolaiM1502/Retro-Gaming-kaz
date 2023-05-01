@@ -100,7 +100,8 @@ private bool TryMove(Vector2 direction) {
         movementInput = movementValue.Get<Vector2>();
         } 
 
-    void OnFire() {
+    void OnAttack() {
+        Debug.Log("Attack detected..");
         animator.SetTrigger("Attack");
     }
 
