@@ -11,17 +11,35 @@ public class SwordAttack : MonoBehaviour
     private void Start() {
         swordCollider = GetComponent<Collider2D>();
         rightAttackOffset = transform.position;
+        Debug.Log("offset" + rightAttackOffset);
         swordCollider.enabled = false;
     }
 
     public void AttackRight() {
         swordCollider.enabled = true;
-        transform.position = rightAttackOffset;
+    
+        FlipCollider();
+            
+        swordCollider.offset = rightAttackOffset;
+
+        //transform.position = rightAttackOffset;
+        Debug.Log ("right" + transform.position);
+    }
+
+    void FlipCollider() {
+        swordCollider.offset = new Vector3(swordCollider.offset.x * -1, swordCollider.offset.y);
     }
 
     public void AttackLeft() {
         swordCollider.enabled = true;
-        transform.position = new Vector3(rightAttackOffset.x * -1, rightAttackOffset.y);
+        {
+            FlipCollider();
+        }
+        //transform.position = new Vector3(rightAttackOffset.x * -1, rightAttackOffset.y);
+        swordCollider.offset = new Vector3(rightAttackOffset.x * -1, rightAttackOffset.y);
+
+        Debug.Log ("left" + transform.position);
+
     }
 
     public void StopAttack() {
