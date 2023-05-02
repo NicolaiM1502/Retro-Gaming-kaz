@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,13 +15,4 @@ public class enemy : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter2D(Collision2D col) {
-        print("collision");
-        Debug.Log ("collision");
-    }
-
-    void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log ("collisionagain");
-    }
 }
-
