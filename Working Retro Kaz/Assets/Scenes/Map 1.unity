@@ -296,6 +296,8 @@ GameObject:
   m_Component:
   - component: {fileID: 757755044}
   - component: {fileID: 757755043}
+  - component: {fileID: 757755046}
+  - component: {fileID: 757755045}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -344,7 +346,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2418f4451f3fdff429d1479a2a862403, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -363,13 +365,60 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757755042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 486.51575, y: 144.5709, z: 0}
+  m_LocalPosition: {x: -11.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &757755045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757755042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3722bbf44df23e4089e0af4a0308472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &757755046
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757755042}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 7.575
 --- !u!1 &1151671828
 GameObject:
   m_ObjectHideFlags: 0
@@ -25194,7 +25243,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -33855,8 +33904,8 @@ Tilemap:
     m_Data: {fileID: 189016665, guid: 7ce3de6a49af6c04c85b1b695f9b084f, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 431900471, guid: 7ce3de6a49af6c04c85b1b695f9b084f, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 17
     m_Data: {fileID: 1671596267, guid: 7ce3de6a49af6c04c85b1b695f9b084f, type: 3}
   - m_RefCount: 18
@@ -33873,8 +33922,8 @@ Tilemap:
     m_Data: {fileID: 1541263139, guid: 7ce3de6a49af6c04c85b1b695f9b084f, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 431900471, guid: 7ce3de6a49af6c04c85b1b695f9b084f, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: 1040527568, guid: 7ce3de6a49af6c04c85b1b695f9b084f, type: 3}
   - m_RefCount: 12
@@ -34050,7 +34099,7 @@ TilemapRenderer:
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
-  m_Mode: 0
+  m_Mode: 1
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
 --- !u!1839735485 &1650429301
@@ -35857,6 +35906,7 @@ GameObject:
   - component: {fileID: 1844803286}
   - component: {fileID: 1844803289}
   - component: {fileID: 1844803290}
+  - component: {fileID: 1844803291}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -35907,7 +35957,11 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
+<<<<<<< Updated upstream
   orthographic size: 6
+=======
+  orthographic size: 1
+>>>>>>> Stashed changes
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -35931,7 +35985,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844803285}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35985,6 +36039,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844803285}
   m_CullTransparentMesh: 1
+--- !u!114 &1844803291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844803285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06f3199779b2c14a9918b9404406954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1866266441
 GameObject:
   m_ObjectHideFlags: 0
