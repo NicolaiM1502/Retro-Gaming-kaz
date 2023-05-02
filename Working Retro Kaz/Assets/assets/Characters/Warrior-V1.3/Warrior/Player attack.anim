@@ -22,28 +22,28 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 21300000, guid: 95154279cf276c246b44807a2ae3f2d9, type: 3}
-    - time: 0.21666667
+    - time: 0.1
       value: {fileID: 21300000, guid: 19d0b199f83b1ac498c3f0b9aa3e9ee7, type: 3}
-    - time: 0.43333334
+    - time: 0.2
       value: {fileID: 21300000, guid: be993b95a776e9a4c907000cf6c72542, type: 3}
-    - time: 0.65
+    - time: 0.3
       value: {fileID: 21300000, guid: 95636e808fdf9814ca1da1076325a126, type: 3}
-    - time: 0.8666667
+    - time: 0.38333333
       value: {fileID: 21300000, guid: 2014605c63e796e4f8913a32a56a7206, type: 3}
-    - time: 1.0833334
+    - time: 0.5
       value: {fileID: 21300000, guid: 05f5ff43a9e911c459eb1a9c80713e45, type: 3}
-    - time: 1.3
+    - time: 0.6
       value: {fileID: 21300000, guid: 4674903bfcef1014b9a9013c0a1a44d0, type: 3}
-    - time: 1.55
+    - time: 0.71666664
       value: {fileID: 21300000, guid: 39daf085d8dbabe45b96a0441f285cd4, type: 3}
-    - time: 1.75
+    - time: 0.8
       value: {fileID: 21300000, guid: 45379e0a04d125647ae69f9b4273a1d3, type: 3}
-    - time: 1.8833333
+    - time: 0.85
       value: {fileID: 21300000, guid: 5bf6c470e620daf42b690c08401c1581, type: 3}
-    - time: 2.0833333
+    - time: 0.95
       value: {fileID: 21300000, guid: bd51442a7c7c02b49856f23bbdd83690, type: 3}
-    - time: 2.3333333
-      value: {fileID: 21300000, guid: 54e06a38c694e1548ad9cde7082aa117, type: 3}
+    - time: 1
+      value: {fileID: 21300000, guid: 95154279cf276c246b44807a2ae3f2d9, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -77,13 +77,13 @@ AnimationClip:
     - {fileID: 21300000, guid: 45379e0a04d125647ae69f9b4273a1d3, type: 3}
     - {fileID: 21300000, guid: 5bf6c470e620daf42b690c08401c1581, type: 3}
     - {fileID: 21300000, guid: bd51442a7c7c02b49856f23bbdd83690, type: 3}
-    - {fileID: 21300000, guid: 54e06a38c694e1548ad9cde7082aa117, type: 3}
+    - {fileID: 21300000, guid: 95154279cf276c246b44807a2ae3f2d9, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.35
+    m_StopTime: 1.0333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -102,4 +102,25 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: SwordAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: SwordAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.0333333
+    functionName: UnlockMovement
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
