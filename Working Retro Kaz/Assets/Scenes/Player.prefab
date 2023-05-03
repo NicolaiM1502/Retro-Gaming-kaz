@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f3f548b4527b94c94913c77db08ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  swordCollider: {fileID: 1760195854947257134}
+  damage: 3
 --- !u!1001 &7389734927809550671
 PrefabInstance:
   m_ObjectHideFlags: 0
