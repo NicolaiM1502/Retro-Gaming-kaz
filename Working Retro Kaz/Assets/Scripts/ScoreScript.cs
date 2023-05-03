@@ -2,24 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public Text MyscoreText;
-    private int Scorenum;
+    public TextMeshProUGUI MyscoreText;
+    private int ScoreNum;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Scorenum = 0;
-        MyscoreText.text = "score : " + Scorenum;
+        ScoreNum = 0;
+        MyscoreText.text = "Score: " + ScoreNum;
     }
 
-    private void onTriggerEnter2D(Collider2D coin)
+
+     private void OnTriggerEnter2D(Collider2D Coin)
     {
 
+        if (Coin.tag == "MyCoin")
+        {
+            ScoreNum +=  10;
+            Destroy(Coin.gameObject);
+            MyscoreText.text = "Score: " + ScoreNum;
 
+
+        }
 
     }
 }
