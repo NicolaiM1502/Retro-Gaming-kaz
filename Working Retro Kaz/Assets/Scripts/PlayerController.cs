@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
             print("isMoving: " + animator.GetBool("isMoving"));
 
         if(movementInput.x < 0) {
-            if (spriteRenderer.flipX == false) {
+                        if (spriteRenderer.flipX == true) {
                 FlipCollider();
             }
             spriteRenderer.flipX = true;
