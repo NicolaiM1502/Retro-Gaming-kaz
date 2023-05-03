@@ -5,22 +5,17 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public float health 
-    {
-        set { 
-            health = value; 
 
-            if(health <= 0) {
-                Defeated();
-            } 
-        }
-        get 
-        {
-            return health; 
-        }
+    public int health = 2;
+
+    public void SetHealth(int x){
+        health = x;
+        if (health <= 0)
+            Defeated();
     }
-
-
+    
+    public int GetHealth(){ return health; }
+    
     //public float health = 1;  
 
 

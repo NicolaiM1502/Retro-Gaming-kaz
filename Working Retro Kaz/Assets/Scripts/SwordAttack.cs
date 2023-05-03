@@ -5,7 +5,7 @@ using UnityEngine;
 public class SwordAttack : MonoBehaviour
 {
     public Collider2D swordCollider;
-    public float damage = 3; 
+    public int damage = 3; 
 
     Vector2 rightAttackOffset;
     
@@ -58,7 +58,7 @@ public class SwordAttack : MonoBehaviour
             if(enemy != null)
             {
                 Debug.Log("Enemy damage");
-                enemy.health -= damage; 
+                enemy.SetHealth( enemy.GetHealth() - damage ); 
             }
         }
     }
