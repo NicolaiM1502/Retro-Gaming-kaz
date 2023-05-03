@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - StartPos
   - Enemy
+  - MyCoin
   layers:
   - Default
   - TransparentFX
