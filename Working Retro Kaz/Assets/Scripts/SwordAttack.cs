@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class SwordAttack : MonoBehaviour
 {
+    public Collider2D swordCollider;
+    public float damage = 3; 
 
     Vector2 rightAttackOffset;
-    Collider2D swordCollider;
+    
 
     private void Start() {
-        swordCollider = GetComponent<Collider2D>();
         rightAttackOffset = swordCollider.offset;
         Debug.Log("offset" + rightAttackOffset);
         swordCollider.enabled = false;
@@ -43,5 +44,20 @@ public class SwordAttack : MonoBehaviour
 
     public void StopAttack() {
         swordCollider.enabled = false;
+    }
+
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Enemy")
+        {
+            Enemy enemy = other.GetComponent<enemy>(); 
+
+            if(enemy != null)
+            {
+                enemy.Health -= damage; 
+            }
+        }
     }
 }

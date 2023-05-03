@@ -130,6 +130,13 @@ private bool TryMove(Vector2 direction) {
 
     }
 
+
+    public void EndSwordAttack()
+    {
+        UnlockMovement(); 
+        swordAttack.StopAttack(); 
+    }
+
     public void LockMovement() {
         canMove = false;
     }
