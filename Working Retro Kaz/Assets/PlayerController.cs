@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
     Animator animator;
+    private Collider2D collider;
     List<RaycastHit2D> CastCollisions = new List<RaycastHit2D>();
     [SerializeField] private InputActionReference movement;
 
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        collider = GetComponent<Collider2D>();
     }
 
     private void FixedUpdate() { 
@@ -65,13 +67,23 @@ public class PlayerController : MonoBehaviour
             print("isMoving: " + animator.GetBool("isMoving"));
 
         if(movementInput.x < 0) {
+            if (spriteRenderer.flipX == false) {
+                FlipCollider();
+            }
             spriteRenderer.flipX = true;
         } else if (movementInput.x > 0) {
+            if (spriteRenderer.flipX == true) {
+                FlipCollider();
+            }
             spriteRenderer.flipX = false;
         }
-    
+
         }
 
+    }
+
+    void FlipCollider() {
+        collider.offset = new Vector3(collider.offset.x * -1, collider.offset.y);
     }
 
 private bool TryMove(Vector2 direction) { 
