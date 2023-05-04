@@ -6,8 +6,11 @@ public class Enemy : MonoBehaviour
 {
 
 
+    Animator animator; 
+
     public int health = 2;
 
+   
     public void SetHealth(int x){
         health = x;
         if (health <= 0)
@@ -18,9 +21,13 @@ public class Enemy : MonoBehaviour
     
     //public float health = 1;  
 
+    public void start()
+    {
+        animator = GetComponent<Animator>(); 
+    }
 
     public void Defeated()
     {
-        Destroy(gameObject); 
+        Destroy(gameObject);   
     } 
 }

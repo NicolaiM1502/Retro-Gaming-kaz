@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 1f;
 
-    public float collisionOffset = 0.05f;
+    public float collisionOffset = 0.05f; 
 
     public ContactFilter2D movementfilter;
 
@@ -39,9 +39,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() { 
 
-         movementInput = _playerActions.PlayerMovement.movement.ReadValue<Vector2>();
-
-
+        movementInput = _playerActions.PlayerMovement.movement.ReadValue<Vector2>(); 
 
         if(canMove) {
 
